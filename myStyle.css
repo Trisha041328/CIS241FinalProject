@@ -1,0 +1,265 @@
+/*STYLE SHEET FOR (personal web site) */
+style{
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: 8px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color:rgba(0, 0, 0, 0.726);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+a{    
+  text-decoration: none;
+  color: white;
+}
+
+/* The grid container */
+.grid-container {
+  grid-column-gap: 20px;
+  display: grid;
+  grid-template-areas: 
+    'header header header' 
+    'left middle right'
+    'ImageMe . .'
+    'footer footer footer';
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color:#aaa;
+  line-height: 300px;
+  height: 300px;
+  text-align: center;
+}
+
+.left:hover{
+  background-color: rgba(197, 84, 182, 0.726)
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+  background-color:#bbb;
+  line-height: 300px;
+  height: 300px;
+  text-align: center;
+}
+
+.middle:hover{
+  background-color: rgba(197, 84, 182, 0.726)
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  background-color:#ccc;
+  line-height: 300px;
+  height: 300px;
+  text-align: center;
+}
+
+.right:hover{
+  background-color: rgba(197, 84, 182, 0.726)
+}
+
+/* Style the footer */
+.footer 
+{
+  grid-area: footer;
+  background-color:#bbb;
+  line-height: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.footer:hover
+{
+  background-color: rgba(197, 84, 182, 0.726)
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header' 
+      'left left left' 
+      'middle middle middle' 
+      'right right right' 
+      'hoverOverlayBox hoverOverlayBox hoverOverlayBox'
+      'footer footer footer';
+  }
+
+  /* Style the Hover Overlay box */
+}
+.hoverOverlayBox 
+{
+  grid-area: hoverOverlayBox;
+  grid-column: 1 /span 3;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hoverOverlayBox:hover .image 
+{
+  opacity: 0.3;
+}
+
+.hoverOverlayBox:hover .middle1 
+{
+  opacity: 1;
+}
+
+.middle1 
+{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  top: -350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* Style the Home page image */
+#ImageMe{
+  width: 100%;
+  max-width: 485px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.image 
+{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.text 
+{
+  background-color: rgba(212, 44, 190, 0.34);
+  color: white;
+  font-size: 20px;
+  padding: 200px 100px;
+}
+
+/* Slider Animation */
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.captiontext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}

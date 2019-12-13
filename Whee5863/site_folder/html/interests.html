@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/myStyle - Copy.css">
+<head></head>
+<body>
+  <div class="grid-container">
+    <div class="header">
+      <h1>Interests</h1>
+    </div>
+      <div class="left">
+          <a href="../html/resume.html"><b>Resume</b></a>
+      </div>
+    <div class="middle">
+      <a href="../html/home - Copy.html"><b>Home</b></a>
+    </div>
+    <div class="right">
+      <a href="../html/reflections.html"><b>Reflections</b></a>
+    </div>
+  </div>
+  <br>
+  <br>
+<h2> 
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 13</div>
+      <img src="../images/Kellee.jpg" style="width:100%">
+      <div class="captiontext">Photography 101</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 13</div>
+      <img src="../images/Kellee1.jpg" style="width:100%">
+      <div class="captiontext">Photography 101</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 13</div>
+      <img src="../images/Rainier.JPG" style="width:100%">
+      <div class="captiontext">Testing Zoom Lens with Mount Rainier</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 13</div>
+      <img src="../images/Bumble.jpg" style="width:100%">
+      <div class="captiontext">Bumble</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 13</div>
+      <img src="../images/Diesel.jpg" style="width:100%">
+      <div class="captiontext">Diesel</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 13</div>
+      <img src="../images/Lilly.jpg" style="width:100%">
+      <div class="captiontext">Lilly</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 13</div>
+      <img src="../images/PintoBW.jpg" style="width:100%">
+      <div class="captiontext">Pinto</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 13</div>
+      <img src="../images/MattPacificBeach.jpg" style="width:100%">
+      <div class="captiontext">Pacific Beach</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 13</div>
+      <img src="../images/PinkSkelly.jpg" style="width:100%">
+      <div class="captiontext">Digital Drawing "Pink Skelly"</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">10 / 13</div>
+      <img src="../images/Unknown.jpg" style="width:100%">
+      <div class="captiontext">Digital Drawing "Unkown"</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">11 / 13</div>
+      <img src="../images/StarBurst.jpg" style="width:100%">
+      <div class="captiontext">Digital Drawing "Star Burst"</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">12 / 13</div>
+      <img src="../images/BlueFlame.jpg" style="width:100%">
+      <div class="captiontext">Digital Drawing "Blue Flame"</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">13 / 13</div>
+      <img src="../images/SoManyThings.jpg" style="width:100%">
+      <div class="captiontext">Digital Drawing "So Many Things"</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span> 
+      <span class="dot" onclick="currentSlide(9)"></span> 
+      <span class="dot" onclick="currentSlide(10)"></span> 
+      <span class="dot" onclick="currentSlide(11)"></span> 
+      <span class="dot" onclick="currentSlide(12)"></span> 
+      <span class="dot" onclick="currentSlide(13)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+</h2>
+  <br>
+  <br>
+  <div class="footer">
+    <a href="../html/guestbook.html"><b>Guestbook</b></a>
+  </div>
+</body>
+</html>
